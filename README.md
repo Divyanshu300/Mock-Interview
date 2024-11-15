@@ -1,36 +1,63 @@
-# 🤖 AI Interview Mocker
+# AI-Powered Mock Interview Platform
 
-Welcome to **AI Interview Mocker**, an innovative platform designed to help you ace your interviews! Powered by the advanced **Gemini API**, we generate realistic and tailored mock interview questions to enhance your preparation. 🌟 Take the next step toward success by practicing with our unique tools today!
+## Description
+This is an advanced and interactive AI-powered mock interview platform designed to help job seekers practice and improve their interview skills. Built with Next.js, Tailwind CSS, and Gemini Api,PostgreSQL, Drizzle ORM, it provides users with a good interview experience to enhance their chances of landing their dream job.
 
-## 🚀 Key Features:
+## Features
+- AI-driven Interview: interview questions and feedback powered by AI.
+- Personalized Interview Experiences: Tailor interview sessions based on job roles and industries.
+- User Experience Level Questions: Questions are adjusted based on the user's experience level, ensuring relevance and appropriate difficulty.
+- Detailed Feedback and Insights: Receive detailed feedback on your performance, including strengths, areas for improvement, and actionable tips.
+- Question Bank: Access a wide range of interview questions across different domains and difficulty levels.
+- Overall Grade: Receive an overall grade for each interview session, providing a quick assessment of your performance.
+- Recent Interviews: Easily access and review your recent interview sessions directly from the home page.
 
-- **✨ User-Friendly Interface**: Sign in or sign up effortlessly through our sleek landing page.
-- **📊 Dashboard**: Manage and track all your mock interviews in one place.
-- **📝 Custom Interview Setup**: Add new interviews with detailed job descriptions.
-- **💡 AI-Generated Questions**: Get 5 custom-tailored interview questions based on your inputs.
-- **🎙️ Interactive Interview Process**: View questions, choose to read or listen, and begin your mock interview.
-- **📹 Record Your Answers**: Seamlessly record and submit your responses.
-- **📈 Comprehensive Feedback**: Receive detailed feedback and ratings from **GenerativeAI**.
-- **📂 Review Past Interviews**: Easily access and track your previous interview sessions.
+## Getting Started
+To get started with the AI-Powered Mock Interview Platform, follow these steps:
 
----
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/modamaan/Ai-mock-Interview.git
 
-## 📸 Screenshots
+2. Navigate to the project directory:
+   ```bash
+   cd ai-mock-interview
 
-Take a look at some of the key areas of our platform:
+3. Install dependencies by running: `npm install` or `yarn install`
 
-### Landing Page
-<img width="953" alt="Landing Page" src="https://github.com/user-attachments/assets/34d207b8-26a6-4956-ac74-c0108dacee92">
+4. Start the Server `npm run dev` or `yarn dev`
 
-### Dashboard
-<img width="958" alt="Dashboard" src="https://github.com/user-attachments/assets/a1cc7993-c9e8-461f-9b36-a527143331fd">
+5. Access the Application: Open your browser and go to http://localhost:3000 to access the application.
 
-### Interview Setup
-<img width="943" alt="Interview Setup" src="https://github.com/user-attachments/assets/d8df9845-b5b0-4446-a5fd-4bb267a2b3b2">
+## Technologies Used
+- Next.js: A React framework for building server-side rendered and static web applications.
+- Gemini API: Provides an interface for accessing the AI interview functionalities.
+- PostgreSQL: A powerful, open-source object-relational database system.
+- Neon Serverless: A serverless deployment for PostgreSQL, offering scalability and ease of use.
+- Drizzle ORM: An ORM that makes database interactions simpler and more intuitive.
 
-### Feedback Section
-<img width="944" alt="Feedback Section" src="https://github.com/user-attachments/assets/1bbb12a4-861b-46f1-bcba-b1ac3cdce4ef">
+## Usage
+To use the AI-Powered Mock Interview Platform, follow these guidelines:
+- Create an Account: Sign up to start your mock interview sessions.
+- Choose Interview Type: Select the type of interview (e.g., technical, behavioral) and job role
+- Start Interview: Begin your mock interview and respond to the AI-generated questions.
+- Receive Feedback: After completing the interview, get detailed feedback and insights to improve.
+- Review Recent Interviews: Access your most recent interviews directly from the home page for quick review and continued improvement.
 
----
+## Feedback
 
-Prepare confidently, improve continuously, and ace your next interview with **AI Interview Mocker**! 🎯
+If you have any feedback, please reach me at [mohamedamaan319@gmail.com](mailto:mohamedamaan319@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/mohamedamaan319/).
+
+
+## Contributing
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+1. Fork this repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them to your branch.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
+
+
+## Support
+
+Show your support by 🌟 the project!!
