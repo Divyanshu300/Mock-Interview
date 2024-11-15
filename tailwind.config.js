@@ -48,6 +48,10 @@ module.exports = {
         },
       },
       colors: {
+        customBeige:"#EAE4DD",
+        customLightBlue: "#6A9AB0",
+        customBlue: "#3A6D8C",
+        customDarkBlue: "#001F3F",
         newBlack: {
           DEFAULT: "#000",
           100: '#000319'

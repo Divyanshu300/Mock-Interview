@@ -80,7 +80,7 @@ const Contect = () => {
           />
           <button
             type="submit"
-            className="px-6 py-3 text-lg font-semibold bg-black text-white rounded-lg shadow-lg hover:bg-gray-700"
+            className="px-6 py-3 text-lg font-semibold border rounded border-customDarkBlue text-black hover:bg-customDarkBlue hover:text-white shadow-lg duration-200 transition-all active:scale-95"
           >
             {loading ? (
               <LoaderCircle className="animate-spin" />
