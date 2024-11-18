@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Contect from './_components/Contect';
 import Link from 'next/link';
 import { FaGithub } from "react-icons/fa";
-import logo from "./logo.jpg";
+// import logo from "./logo.jpg";
 
 const page = () => {
   return (
@@ -14,19 +14,19 @@ const page = () => {
     // </div>
 
     <div >
-      <Head>
+      {/* <Head>
         <title>AI Mock Interview</title>
         <meta name="description" content="Ace your next interview with AI-powered mock interviews" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
-      <main className="min-h-screen bg-customBeige">
+      <main className="min-h-screen bg-customBeige text-black">
         {/* Header Section */}
-        <header className="w-full py-8 shadow-md">
-          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
-            <div className='flex items-center justify-center gap-4'>
-            <img src={logo} alt="opportunest logo" className=''/>
-            <h1 className="text-3xl font-bold text-primary">AI Mock Interview</h1>
+        <header className="w-full py-4 shadow-md ">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-2">
+            <div className='flex items-center  gap-4'>
+            <img src="/logo.jpg" alt="opportunest logo" className='w-[20%]'/>
+            <h1 className="text-3xl font-bold">AI Mock Interview</h1>
             </div>
             <nav className="flex flex-col sm:flex-row flex-wrap items-center justify-between mt-4 md:mt-0 space-y-4 sm:space-y-0 sm:space-x-4">
               {/* <div>

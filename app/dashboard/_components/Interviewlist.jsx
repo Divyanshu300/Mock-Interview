@@ -17,17 +17,23 @@ const InterviewList = () => {
   }, [user]);
 
   const GetInterviewList = async () => {
-    const result = await db
-      .select()
-      .from(MockInterview)
-      .where(
-        eq(MockInterview.createdBy, user?.primaryEmailAddress?.emailAddress)
-      )
-      .orderBy(desc(MockInterview.id));
-
-    console.log(result);
-    setInterviewList(result);
+    try {
+      const result = await db
+        .select()
+        .from(MockInterview)
+        .where(eq(MockInterview.createdBy, user?.primaryEmailAddress?.emailAddress))
+        .orderBy(desc(MockInterview.id));
+  
+      console.log(result);
+      setInterviewList(result);
+    } catch (error) {
+      console.error("Failed to fetch interviews:", error);
+      setInterviewList([]);
+    }
   };
+  
+
+
   return (
     <div>
       <h2 className="font-medium text-xl">Previous Mock Interview</h2>
