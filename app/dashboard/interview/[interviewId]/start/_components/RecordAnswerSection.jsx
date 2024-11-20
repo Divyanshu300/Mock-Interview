@@ -26,6 +26,7 @@ const RecordAnswerSection = ({
   const { webCamEnabled, setWebCamEnabled } = useContext(WebCamContext);
   const mediaRecorderRef = useRef(null);
   const chunksRef = useRef([]);
+  
 
   const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
 
@@ -144,8 +145,10 @@ const RecordAnswerSection = ({
       setLoading(false);
     }
   };
-
+ 
   return (
+    
+    
     <div className="flex flex-col items-center justify-center overflow-hidden">
       <div className="flex flex-col justify-center items-center rounded-lg p-5 bg-black mt-4 w-[30rem] ">
         {webCamEnabled ? (
@@ -168,13 +171,25 @@ const RecordAnswerSection = ({
           onClick={isRecording ? stopRecording : startRecording}
           disabled={loading}
         >
-          {isRecording ? (
+          {!loading &&
+            <>{isRecording  ? (
             <h2 className="text-red-400 flex gap-2 ">
               <Mic /> Stop Recording...
             </h2>
           ) : (
             " Record Answer"
           )}
+          </>
+          }
+          
+          
+          { loading && (
+            <div className="loader">
+
+            </div>
+          )
+
+          }
         </Button>
       </div>
       {/* Check transcription code */}
@@ -185,6 +200,8 @@ const RecordAnswerSection = ({
         </div>
       )} */}
     </div>
+    
+    
   );
 };
 
