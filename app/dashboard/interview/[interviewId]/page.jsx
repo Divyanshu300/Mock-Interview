@@ -72,7 +72,7 @@ const Interview = ({ params }) => {
               <WebcamIcon className="h-72 w-full my-6 p-20 bg-secondary rounded-lg border" />
             </div>
           )}
-          <div>
+          <div className="rounded bg-customDarkBlue text-white hover:scale-105 dark:text-black dark:bg-white">
             <Button
               className={`${webCamEnabled ? "w-full" : "w-full"}`}
               onClick={() => setWebCamEnabled((prev) => !prev)}
@@ -84,7 +84,7 @@ const Interview = ({ params }) => {
       </div>
       <div className="flex justify-center my-4 md:my-0 md:justify-end md:items-end">
         <Link href={"/dashboard/interview/" + params.interviewId + "/start"}>
-          <Button>Start Interview</Button>
+          <Button className=" bg-customDarkBlue text-white hover:scale-105 dark:text-black dark:bg-white">Start Interview</Button>
         </Link>
       </div>
     </div>
