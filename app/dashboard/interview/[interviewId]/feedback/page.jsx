@@ -102,7 +102,7 @@ const Feedback = ({ params }) => {
         </>
       )}
 
-      <Button onClick={() => router.replace("/dashboard")}>Go Home</Button>
+      <Button className="bg-customDarkBlue m-2 hover:scale-105 text-white dark:bg-white dark:text-black" onClick={() => router.replace("/dashboard")}>Go Home</Button>
     </div>
   );
 };

@@ -30,43 +30,54 @@ const StartInterview = ({ params }) => {
   };
 
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 my-10">
-        {/* Questin Section */}
-        <QuestionSection
-          mockInterviewQuestion={mockInterviewQuestion}
-          activeQuestionIndex={activeQuestionIndex}
-        />
+    <div className="min-h-screen bg-gradient-to-r from-customLightBlue via-customBeige to-customBlue p-5">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-3xl font-bold text-customDarkBlue text-center mb-8">
+          Mock Interview Session
+        </h1>
 
-        {/* Video/audio Recording */}
-        <RecordAnswerSection
-          mockInterviewQuestion={mockInterviewQuestion}
-          activeQuestionIndex={activeQuestionIndex}
-          interviewData={interviewData}
-        />
-      </div>
-      <div className="flex gap-3 my-5 md:my-0 md:justify-end md:gap-6">
-        {activeQuestionIndex > 0 && (
-          <Button
-            onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
-          >
-            Previous Question
-          </Button>
-        )}
-        {activeQuestionIndex != mockInterviewQuestion?.length - 1 && (
-          <Button
-            onClick={() => setActiveQuestionIndex(activeQuestionIndex + 1)}
-          >
-            Next Question
-          </Button>
-        )}
-        {activeQuestionIndex == mockInterviewQuestion?.length - 1 && (
-          <Link
-            href={"/dashboard/interview/" + interviewData?.mockId + "/feedback"}
-          >
-            <Button>End Interview</Button>
-          </Link>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-6 rounded-lg shadow-md">
+          {/* Question Section */}
+          <QuestionSection
+            mockInterviewQuestion={mockInterviewQuestion}
+            activeQuestionIndex={activeQuestionIndex}
+          />
+
+          {/* Video/Audio Recording Section */}
+          <RecordAnswerSection
+            mockInterviewQuestion={mockInterviewQuestion}
+            activeQuestionIndex={activeQuestionIndex}
+            interviewData={interviewData}
+          />
+        </div>
+
+        <div className="flex justify-between items-center mt-8">
+          {activeQuestionIndex > 0 && (
+            <Button
+              onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
+              className="bg-customDarkBlue text-white hover:scale-105 px-4 py-2 rounded-lg shadow"
+            >
+              Previous Question
+            </Button>
+          )}
+          {activeQuestionIndex < mockInterviewQuestion?.length - 1 && (
+            <Button
+              onClick={() => setActiveQuestionIndex(activeQuestionIndex + 1)}
+              className="bg-customDarkBlue text-white hover:scale-105 px-4 py-2 rounded-lg shadow"
+            >
+              Next Question
+            </Button>
+          )}
+          {activeQuestionIndex === mockInterviewQuestion?.length - 1 && (
+            <Link
+              href={`/dashboard/interview/${interviewData?.mockId}/feedback`}
+            >
+              <Button className="bg-customDarkBlue text-white hover:scale-105 px-4 py-2 rounded-lg shadow">
+                End Interview
+              </Button>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
